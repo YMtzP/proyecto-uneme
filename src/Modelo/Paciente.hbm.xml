@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-nov-2017 14:40:41 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Paciente" table="Paciente" catalog="uneme_capa" optimistic-lock="version">
+        <id name="idPaciente" type="java.lang.Integer">
+            <column name="id_paciente" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="25" not-null="true">
+                <comment>Nombre del paciente</comment>
+            </column>
+        </property>
+        <property name="apellidoPaterno" type="string">
+            <column name="apellido_paterno" length="20" not-null="true">
+                <comment>Apellido paterno del paciente</comment>
+            </column>
+        </property>
+        <property name="apellidoMaterno" type="string">
+            <column name="apellido_materno" length="20" not-null="true">
+                <comment>Apellido materno del paciente</comment>
+            </column>
+        </property>
+        <property name="sexo" type="string">
+            <column name="sexo" length="2" not-null="true">
+                <comment>Sexo del paciente</comment>
+            </column>
+        </property>
+        <property name="fechaNac" type="date">
+            <column name="fecha_nac" length="10" not-null="true">
+                <comment>Fecha de nacimiento del paciente</comment>
+            </column>
+        </property>
+        <property name="estadoCivil" type="string">
+            <column name="estado_civil" length="20">
+                <comment>Estado civil del paciente</comment>
+            </column>
+        </property>
+        <property name="municipioNacimiento" type="string">
+            <column name="municipio__nacimiento" length="100">
+                <comment>Municipio de nacimiento del paciente</comment>
+            </column>
+        </property>
+        <property name="estadoNacimiento" type="string">
+            <column name="estado_nacimiento" length="100">
+                <comment>Estado de nacimiento del paciente</comment>
+            </column>
+        </property>
+        <property name="ocupacion" type="string">
+            <column name="ocupacion" length="70" />
+        </property>
+        <property name="rfc" type="string">
+            <column name="rfc" length="13">
+                <comment>RFC del paciente</comment>
+            </column>
+        </property>
+        <property name="curp" type="string">
+            <column name="curp" length="18">
+                <comment>Curp del paciente</comment>
+            </column>
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="15">
+                <comment>Telefono del paciente</comment>
+            </column>
+        </property>
+        <property name="celular" type="string">
+            <column name="celular" length="15">
+                <comment>N&#195;&#186;mero de celular del paciente</comment>
+            </column>
+        </property>
+        <property name="idDomicilio" type="java.lang.Integer">
+            <column name="id_domicilio">
+                <comment>Hace referencia al domicilio perteneciente del paciente</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

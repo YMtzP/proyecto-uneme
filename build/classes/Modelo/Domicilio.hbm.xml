@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-nov-2017 14:40:41 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Domicilio" table="Domicilio" catalog="uneme_capa" optimistic-lock="version">
+        <id name="idDomicilio" type="java.lang.Integer">
+            <column name="id_domicilio" />
+            <generator class="identity" />
+        </id>
+        <property name="calle" type="string">
+            <column name="calle" length="100" not-null="true">
+                <comment>Nombre de la calle del domicilio</comment>
+            </column>
+        </property>
+        <property name="numero" type="string">
+            <column name="numero" length="5" not-null="true">
+                <comment>N&#195;&#186;mero del domicilio</comment>
+            </column>
+        </property>
+        <property name="colonia" type="string">
+            <column name="colonia" length="100">
+                <comment>Colonia del domicilio</comment>
+            </column>
+        </property>
+        <property name="codigoPostal" type="string">
+            <column name="codigo_postal" length="5">
+                <comment>Codigo postal del domicilio</comment>
+            </column>
+        </property>
+        <property name="delegacionMunicipio" type="string">
+            <column name="delegacion_municipio" length="100" not-null="true">
+                <comment>Delegaci&#195;&#179;n o municipio del domicilio</comment>
+            </column>
+        </property>
+        <property name="entidadLocalidad" type="string">
+            <column name="entidad_localidad" length="100" not-null="true">
+                <comment>Entidad o localidad del domicilio</comment>
+            </column>
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" length="100" not-null="true">
+                <comment>Estado al que pertenece el domicilio</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

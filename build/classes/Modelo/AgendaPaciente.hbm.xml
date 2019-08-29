@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-nov-2017 14:40:41 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.AgendaPaciente" table="AgendaPaciente" catalog="uneme_capa" optimistic-lock="version">
+        <id name="idAgendaPaciente" type="java.lang.Integer">
+            <column name="id_agenda_paciente" />
+            <generator class="identity" />
+        </id>
+        <property name="fecha" type="date">
+            <column name="fecha" length="10" not-null="true">
+                <comment>Fecha de la cita del paciente</comment>
+            </column>
+        </property>
+        <property name="hora" type="time">
+            <column name="hora" length="8" not-null="true">
+                <comment>Hora de la cita del paciente</comment>
+            </column>
+        </property>
+        <property name="observacion" type="string">
+            <column name="observacion" length="100">
+                <comment>Observaci&#195;&#179;n de la cita del paciente</comment>
+            </column>
+        </property>
+        <property name="horaLlegada" type="time">
+            <column name="hora_llegada" length="8">
+                <comment>Hora de llegada a la UNEME-CAPA del paciente</comment>
+            </column>
+        </property>
+        <property name="horaEntrada" type="time">
+            <column name="hora_entrada" length="8">
+                <comment>Hora de entrada a consulta del paciente</comment>
+            </column>
+        </property>
+        <property name="horaSalida" type="time">
+            <column name="hora_salida" length="8">
+                <comment>Hora de salida de consulta del paciente</comment>
+            </column>
+        </property>
+        <property name="idPaciente" type="java.lang.Integer">
+            <column name="id_paciente">
+                <comment>Hace referencia al paciente al que pertenece la cita</comment>
+            </column>
+        </property>
+        <property name="tipo" type="string">
+            <column name="tipo" length="21">
+                <comment>Tipo de cita del paciente</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

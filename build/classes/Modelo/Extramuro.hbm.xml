@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-nov-2017 14:40:41 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Extramuro" table="Extramuro" catalog="uneme_capa" optimistic-lock="version">
+        <id name="idExtramuro" type="java.lang.Integer">
+            <column name="id_extramuro" />
+            <generator class="identity" />
+        </id>
+        <property name="actividad" type="string">
+            <column name="actividad" length="100" />
+        </property>
+        <property name="lugar" type="string">
+            <column name="lugar" length="100" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="fecha" length="10" />
+        </property>
+        <property name="hora" type="time">
+            <column name="hora" length="8" />
+        </property>
+    </class>
+</hibernate-mapping>

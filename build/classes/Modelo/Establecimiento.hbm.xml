@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-nov-2017 14:40:41 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Establecimiento" table="establecimiento" catalog="uneme_capa" optimistic-lock="version">
+        <id name="idEstablecimiento" type="java.lang.Integer">
+            <column name="id_establecimiento" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="150" not-null="true" />
+        </property>
+        <property name="nombreResponsable" type="string">
+            <column name="nombre_responsable" length="25" not-null="true">
+                <comment>Nombre del responsable del establecimiento</comment>
+            </column>
+        </property>
+        <property name="apellidoPaternoResponsable" type="string">
+            <column name="apellido_paterno_responsable" length="20" not-null="true">
+                <comment>Apellido paterno del establecimiento</comment>
+            </column>
+        </property>
+        <property name="apellidoMaternoResponsable" type="string">
+            <column name="apellido_materno_responsable" length="20" not-null="true">
+                <comment>Apellido materno del establecimiento</comment>
+            </column>
+        </property>
+        <property name="telefonoEstablecimiento" type="string">
+            <column name="telefono_establecimiento" length="10">
+                <comment>N&#195;&#186;mero de telefono del establecimiento</comment>
+            </column>
+        </property>
+        <property name="idDomicilio" type="java.lang.Integer">
+            <column name="id_domicilio" />
+        </property>
+    </class>
+</hibernate-mapping>

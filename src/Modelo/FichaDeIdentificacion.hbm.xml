@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-nov-2017 14:40:41 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.FichaDeIdentificacion" table="FichaDeIdentificacion" catalog="uneme_capa" optimistic-lock="version">
+        <id name="idFichaDeIdentificacion" type="java.lang.Integer">
+            <column name="id_ficha_de_identificacion" />
+            <generator class="identity" />
+        </id>
+        <property name="referidoPor" type="string">
+            <column name="referido_por" length="43" not-null="true">
+                <comment>Campo en el que se especifica por quien fue referido a la UNEME-CAPA</comment>
+            </column>
+        </property>
+        <property name="religion" type="string">
+            <column name="religion" length="60" not-null="true">
+                <comment>Religion del paciente</comment>
+            </column>
+        </property>
+        <property name="grupoSanguineo" type="string">
+            <column name="grupo_sanguineo" length="15">
+                <comment>Grupo sanguineo del paciente</comment>
+            </column>
+        </property>
+        <property name="hablaLenguaIndigena" type="string">
+            <column name="habla_lengua_indigena" length="3" not-null="true">
+                <comment>Campo que indica si habla o entiende alguna lengua indigena</comment>
+            </column>
+        </property>
+        <property name="lenguaIndigena" type="string">
+            <column name="lengua_indigena" length="25">
+                <comment>Lengua indigena que habla o entiende</comment>
+            </column>
+        </property>
+        <property name="migrante" type="string">
+            <column name="migrante" length="3" not-null="true">
+                <comment>Campo que indica si el paciente ha vivido por mas de 6 meses fuera del pais</comment>
+            </column>
+        </property>
+        <property name="derechohabiencia" type="string">
+            <column name="derechohabiencia" length="15">
+                <comment>Campo en el que se especifica el tipo de derechohabiencia</comment>
+            </column>
+        </property>
+        <property name="numeroDerechohabiencia" type="string">
+            <column name="numero_derechohabiencia" length="15">
+                <comment>N&#195;&#186;mero de derechohaciencia</comment>
+            </column>
+        </property>
+        <property name="motivoConsulta" type="string">
+            <column name="motivo_consulta" length="200" not-null="true">
+                <comment>Motivo de la consulta</comment>
+            </column>
+        </property>
+        <property name="escolaridad" type="string">
+            <column name="escolaridad" length="45" not-null="true" />
+        </property>
+        <property name="nombreContacto" type="string">
+            <column name="nombre_contacto" length="25" not-null="true">
+                <comment>Nombre del primer contacto del paciente</comment>
+            </column>
+        </property>
+        <property name="apPaternoContacto" type="string">
+            <column name="ap_paterno_contacto" length="20" not-null="true">
+                <comment>Apellido paterno del primer contacto del paciente</comment>
+            </column>
+        </property>
+        <property name="apMaternoContacto" type="string">
+            <column name="ap_materno_contacto" length="20" not-null="true">
+                <comment>Apellido materno del primer contacto del paciente</comment>
+            </column>
+        </property>
+        <property name="parentesco" type="string">
+            <column name="parentesco" length="20" not-null="true">
+                <comment>Parentesco del primer contacto del paciente</comment>
+            </column>
+        </property>
+        <property name="idDomicilioContacto" type="java.lang.Integer">
+            <column name="id_domicilio_contacto">
+                <comment>Hace referencia al domicilio del primer contacto del paciente</comment>
+            </column>
+        </property>
+        <property name="telefonoContacto" type="string">
+            <column name="telefono_contacto" length="15">
+                <comment>N&#195;&#186;mero de telefono del primer contacto del paciente</comment>
+            </column>
+        </property>
+        <property name="celularContacto" type="string">
+            <column name="celular_contacto" length="15">
+                <comment>N&#195;&#186;mero de celular del primer contacto del paciente</comment>
+            </column>
+        </property>
+        <property name="idEmpleado" type="java.lang.Integer">
+            <column name="id_empleado">
+                <comment>Hace referencia al empleado que realizo la ficha de identificaci&#195;&#179;n</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

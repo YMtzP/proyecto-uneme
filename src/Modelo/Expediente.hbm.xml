@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-nov-2017 14:40:41 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Expediente" table="Expediente" catalog="uneme_capa" optimistic-lock="version">
+        <id name="idExpediente" type="java.lang.Integer">
+            <column name="id_expediente" />
+            <generator class="identity" />
+        </id>
+        <property name="numExpediente" type="string">
+            <column name="num_expediente" length="12" not-null="true" />
+        </property>
+        <property name="fechaAperturaExpediente" type="date">
+            <column name="fecha_apertura_expediente" length="10">
+                <comment>Fecha en la que se aperturo el expediente</comment>
+            </column>
+        </property>
+        <property name="idFichaIdentificacion" type="java.lang.Integer">
+            <column name="id_ficha_identificacion">
+                <comment>Hace referencia a la ficha de identificaci&#195;&#179;n del paciente</comment>
+            </column>
+        </property>
+        <property name="idPaciente" type="java.lang.Integer">
+            <column name="id_paciente">
+                <comment>Hace referencia al paciente al que le pertenece el expediente</comment>
+            </column>
+        </property>
+        <property name="pruebaRealizada" type="string">
+            <column name="prueba_realizada" length="6">
+                <comment>Nombre de la prueba realizada</comment>
+            </column>
+        </property>
+        <property name="numSesiones" type="java.lang.Integer">
+            <column name="num_sesiones" />
+        </property>
+        <property name="nombreFamiliarRepresentanteLegal" type="string">
+            <column name="nombre_familiar_representante_legal" length="100" />
+        </property>
+        
+        <property name="intervencionId" type="java.lang.Integer">
+            <column name="intervencion_id" />
+        </property>
+    </class>
+</hibernate-mapping>

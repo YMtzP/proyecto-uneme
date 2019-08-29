@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-nov-2017 14:40:41 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Referencia" table="Referencia" catalog="uneme_capa" optimistic-lock="version">
+        <id name="idReferencia" type="java.lang.Integer">
+            <column name="id_referencia" />
+            <generator class="identity" />
+        </id>
+        <property name="fecha" type="date">
+            <column name="fecha" length="10">
+                <comment>Fecha en la que se realizo la referencia</comment>
+            </column>
+        </property>
+        <property name="hora" type="time">
+            <column name="hora" length="8">
+                <comment>Hora en la que se realizo la referencia</comment>
+            </column>
+        </property>
+        <property name="urgencia" type="string">
+            <column name="urgencia" length="3">
+                <comment>Campo en donde se indica si es urgente o no la referencia</comment>
+            </column>
+        </property>
+        <property name="motivoDeEnvio" type="string">
+            <column name="motivo_de_envio" length="100" not-null="true">
+                <comment>Motivo de envio de la referencia</comment>
+            </column>
+        </property>
+        <property name="idEstablecimientoRefiere" type="java.lang.Integer">
+            <column name="id_establecimiento_refiere">
+                <comment>Hace referencia al establecimiento que refiere</comment>
+            </column>
+        </property>
+        <property name="idEstablecimientoSerefiere" type="int">
+            <column name="id_establecimiento_serefiere" not-null="true">
+                <comment>Hace referencia al establecimiento que se refiere</comment>
+            </column>
+        </property>
+        <property name="motivoDeReferencia" type="string">
+            <column name="motivo_de_referencia" length="300">
+                <comment>Motivo de referencia</comment>
+            </column>
+        </property>
+        <property name="diagnosticoClinico" type="string">
+            <column name="diagnostico_clinico" length="100">
+                <comment>Diagnostico clinico del paciente</comment>
+            </column>
+        </property>
+        <property name="observaciones" type="string">
+            <column name="observaciones" length="100">
+                <comment>Observaciones de la referencia</comment>
+            </column>
+        </property>
+        <property name="idEmpleado" type="java.lang.Integer">
+            <column name="id_empleado">
+                <comment>Hace referencia al empleado que realizo la referencia</comment>
+            </column>
+        </property>
+        <property name="idPaciente" type="java.lang.Integer">
+            <column name="id_paciente" />
+        </property>
+    </class>
+</hibernate-mapping>

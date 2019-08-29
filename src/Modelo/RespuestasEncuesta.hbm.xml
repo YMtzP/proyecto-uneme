@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-nov-2017 14:40:41 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.RespuestasEncuesta" table="RespuestasEncuesta" catalog="uneme_capa" optimistic-lock="version">
+        <id name="idRespuesta" type="java.lang.Long">
+            <column name="id_respuesta" />
+            <generator class="identity" />
+        </id>
+        <property name="valorRespuesta" type="string">
+            <column name="valor_respuesta" length="1000" />
+        </property>
+        <property name="idPregunta" type="int">
+            <column name="id_pregunta" not-null="true" />
+        </property>
+        <property name="idEmpleado" type="int">
+            <column name="id_empleado" not-null="true" />
+        </property>
+        <property name="idExpediente" type="int">
+            <column name="id_expediente" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

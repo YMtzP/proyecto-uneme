@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-nov-2017 14:40:41 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Pregunta" table="Pregunta" catalog="uneme_capa" optimistic-lock="version">
+        <id name="idPregunta" type="int">
+            <column name="id_pregunta" />
+            <generator class="assigned" />
+        </id>
+        <property name="clavePregunta" type="string">
+            <column name="clave_pregunta" length="45" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="500" />
+        </property>
+        <property name="encuesta" type="int">
+            <column name="encuesta" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

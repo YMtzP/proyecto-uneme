@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-nov-2017 14:40:41 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.NotaRescate" table="NotaRescate" catalog="uneme_capa" optimistic-lock="version">
+        <id name="idNotaRescate" type="java.lang.Integer">
+            <column name="id_nota_rescate" />
+            <generator class="identity" />
+        </id>
+        <property name="fechaLlamada" type="date">
+            <column name="fecha_llamada" length="10" not-null="true">
+                <comment>Fecha en la que se realizo la llamada</comment>
+            </column>
+        </property>
+        <property name="horaLlamada" type="time">
+            <column name="hora_llamada" length="8" not-null="true">
+                <comment>Hora en la que se realizo la llamada</comment>
+            </column>
+        </property>
+        <property name="idUltimaCita" type="java.lang.Integer">
+            <column name="id_ultima_cita">
+                <comment>Hace referencia a la ultima cita del paciente</comment>
+            </column>
+        </property>
+        <property name="idProximaCita" type="java.lang.Integer">
+            <column name="id_proxima_cita">
+                <comment>Hace referencia a la proxima cita del paciente</comment>
+            </column>
+        </property>
+        <property name="observaciones" type="string">
+            <column name="observaciones" length="100">
+                <comment>Observaciones de la llamada</comment>
+            </column>
+        </property>
+        <property name="idEmpleado" type="java.lang.Integer">
+            <column name="id_empleado">
+                <comment>Hace referencia al empleado que realizo la llamada</comment>
+            </column>
+        </property>
+        <property name="idExpediente" type="java.lang.Integer">
+            <column name="id_expediente">
+                <comment>Hace referencia al expediente del paciente al que se realizo la llamada</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

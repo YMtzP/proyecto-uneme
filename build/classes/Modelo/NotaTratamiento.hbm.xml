@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-nov-2017 14:40:41 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.NotaTratamiento" table="NotaTratamiento" catalog="uneme_capa" optimistic-lock="version">
+        <id name="idNotaTratamiento" type="java.lang.Integer">
+            <column name="id_nota_tratamiento" />
+            <generator class="identity" />
+        </id>
+        <property name="fechaNotaTratamiento" type="date">
+            <column name="fecha_nota_tratamiento" length="10">
+                <comment>Fecha en la que se realizo la nota de tratamiento</comment>
+            </column>
+        </property>
+        <property name="horaInicioNotaTratamiento" type="time">
+            <column name="hora_inicio_nota_tratamiento" length="8">
+                <comment>Hora de inicio de la consulta</comment>
+            </column>
+        </property>
+        <property name="servicioOtorgado" type="string">
+            <column name="servicio_otorgado" length="31">
+                <comment>Servicio otorgado en la consulta</comment>
+            </column>
+        </property>
+        <property name="resumenSesion" type="string">
+            <column name="resumen_sesion" length="16777215">
+                <comment>Resumen de la consulta</comment>
+            </column>
+        </property>
+        <property name="pronosticoTratamiento" type="string">
+            <column name="pronostico_tratamiento" length="500">
+                <comment>Pronostico del tratamiento</comment>
+            </column>
+        </property>
+        <property name="idEmpleado" type="java.lang.Integer">
+            <column name="id_empleado">
+                <comment>Hace referencia al empleado que realizo la nota de tratamiento</comment>
+            </column>
+        </property>
+        <property name="horaFinNotaTratamiento" type="time">
+            <column name="hora_fin_nota_tratamiento" length="8">
+                <comment>Hora en la que finalizo la consulta</comment>
+            </column>
+        </property>
+        <property name="idExpediente" type="java.lang.Integer">
+            <column name="id_expediente">
+                <comment>Hace referencia al expediente del paciente que asistio a la consulta</comment>
+            </column>
+        </property>
+        <property name="diagnostico" type="string">
+            <column name="diagnostico" length="100">
+                <comment>diagnostico de la consulta</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
